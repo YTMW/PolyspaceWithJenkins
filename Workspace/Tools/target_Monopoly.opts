@@ -1,0 +1,3 @@
+-misra-cpp SQO-subset1
+-no-extern-C
+-do-not-generate-results-for all-headers

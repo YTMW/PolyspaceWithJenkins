@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--EDRS Version 2.0-->
+<global>
+   <file name="C:\\MinGW\\lib\\gcc\\mingw32\\4.5.0\\include\\c++\\ext\\atomicity.h" comment="">
+      <function name="__gnu_cxx::__exchange_and_add_dispatch(int *, int)" comment="" line="75" main_generator_called="disabled" attributes="extern">
+         <scalar name="arg2" comment="" line="75" base_type="int32" complete_type="int32" init_mode="disabled" init_range="disabled" global_assert="unsupported" assert_range="unsupported"/>
+         <scalar name="return" comment="" line="75" base_type="int32" complete_type="int32" init_mode="PERMANENT" init_modes_allowed="4" init_range="min..max" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+   </file>
+   <file name="C:\\Polyspace\\tools\\Jenkins\\Monopoly\\board.cpp" comment="">
+      <function name="board::get_numberOfSquares() const" comment="" line="203" main_generator_called="MAIN_GENERATOR">
+         <scalar name="return" comment="" line="203" base_type="int32" complete_type="int32" init_mode="disabled" init_range="disabled" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+      <function name="board::get_square(int)" comment="" line="179" main_generator_called="MAIN_GENERATOR">
+         <scalar name="arg2" comment="" line="179" base_type="int32" complete_type="int32" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+      <function name="board::set_numberOfSquares(int)" comment="" line="191" main_generator_called="MAIN_GENERATOR">
+         <scalar name="arg2" comment="" line="191" base_type="int32" complete_type="int32" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+      <function name="board::set_square(int, square *)" comment="" line="167" main_generator_called="MAIN_GENERATOR">
+         <scalar name="arg2" comment="" line="167" base_type="int32" complete_type="int32" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+   </file>
+   <file name="C:\\Polyspace\\tools\\Jenkins\\Monopoly\\die.cpp" comment="">
+      <function name="die::get_face_value() const" comment="" line="43" main_generator_called="MAIN_GENERATOR">
+         <scalar name="return" comment="" line="43" base_type="int32" complete_type="int32" init_mode="disabled" init_range="disabled" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+      <function name="die::set_face_value(int)" comment="" line="31" main_generator_called="MAIN_GENERATOR">
+         <scalar name="arg2" comment="" line="31" base_type="int32" complete_type="int32" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+   </file>
+   <file name="C:\\Polyspace\\tools\\Jenkins\\Monopoly\\game.cpp" comment="">
+      <function name="game::get_die(int) const" comment="" line="91" main_generator_called="MAIN_GENERATOR">
+         <scalar name="arg2" comment="" line="91" base_type="int32" complete_type="int32" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+      <function name="game::get_numberOfDies() const" comment="" line="115" main_generator_called="MAIN_GENERATOR">
+         <scalar name="return" comment="" line="115" base_type="int32" complete_type="int32" init_mode="disabled" init_range="disabled" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+      <function name="game::get_numberOfPlayers() const" comment="" line="175" main_generator_called="MAIN_GENERATOR">
+         <scalar name="return" comment="" line="175" base_type="int32" complete_type="int32" init_mode="disabled" init_range="disabled" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+      <function name="game::get_player(int)" comment="" line="151" main_generator_called="MAIN_GENERATOR">
+         <scalar name="arg2" comment="" line="151" base_type="int32" complete_type="int32" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+      <function name="game::set_die(int, die *)" comment="" line="79" main_generator_called="MAIN_GENERATOR">
+         <scalar name="arg2" comment="" line="79" base_type="int32" complete_type="int32" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+      <function name="game::set_numberOfDies(int)" comment="" line="103" main_generator_called="MAIN_GENERATOR">
+         <scalar name="arg2" comment="" line="103" base_type="int32" complete_type="int32" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+      <function name="game::set_numberOfPlayers(int)" comment="" line="163" main_generator_called="MAIN_GENERATOR">
+         <scalar name="arg2" comment="" line="163" base_type="int32" complete_type="int32" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+      <function name="game::set_player(int, player *)" comment="" line="139" main_generator_called="MAIN_GENERATOR">
+         <scalar name="arg2" comment="" line="139" base_type="int32" complete_type="int32" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+   </file>
+   <file name="C:\\Polyspace\\tools\\Jenkins\\Monopoly\\lot_square.cpp" comment="">
+      <function name="lot_square::get_rent() const" comment="" line="27" main_generator_called="MAIN_GENERATOR">
+         <scalar name="return" comment="" line="27" base_type="int32" complete_type="int32" init_mode="disabled" init_range="disabled" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+      <function name="lot_square::set_rent(int)" comment="" line="32" main_generator_called="MAIN_GENERATOR">
+         <scalar name="arg2" comment="" line="32" base_type="int32" complete_type="int32" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+   </file>
+   <file name="C:\\Polyspace\\tools\\Jenkins\\Monopoly\\main.cpp" comment="">
+      <function name="main" comment="" line="13" main_generator_called="MAIN_GENERATOR">
+         <scalar name="return" comment="" line="13" base_type="int32" complete_type="int32" init_mode="disabled" init_range="disabled" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+   </file>
+   <file name="C:\\Polyspace\\tools\\Jenkins\\Monopoly\\player.cpp" comment="">
+      <function name="player::collect(int)" comment="" line="123" main_generator_called="MAIN_GENERATOR">
+         <scalar name="arg2" comment="" line="123" base_type="int32" complete_type="int32" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+      <function name="player::get_cash() const" comment="" line="118" main_generator_called="MAIN_GENERATOR">
+         <scalar name="return" comment="" line="118" base_type="int32" complete_type="int32" init_mode="disabled" init_range="disabled" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+      <function name="player::move(int)" comment="" line="80" main_generator_called="MAIN_GENERATOR">
+         <scalar name="arg2" comment="" line="80" base_type="int32" complete_type="int32" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+      <function name="player::set_cash(int)" comment="" line="106" main_generator_called="MAIN_GENERATOR">
+         <scalar name="arg2" comment="" line="106" base_type="int32" complete_type="int32" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+   </file>
+   <file name="C:\\Polyspace\\tools\\Jenkins\\Monopoly\\property_square.cpp" comment="">
+      <function name="property_square::get_price() const" comment="" line="38" main_generator_called="MAIN_GENERATOR">
+         <scalar name="return" comment="" line="38" base_type="int32" complete_type="int32" init_mode="disabled" init_range="disabled" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+      <function name="property_square::set_price(int)" comment="" line="28" main_generator_called="MAIN_GENERATOR">
+         <scalar name="arg2" comment="" line="28" base_type="int32" complete_type="int32" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+   </file>
+   <file name="C:\\Polyspace\\tools\\Jenkins\\Monopoly\\railroad_square.cpp" comment="">
+      <function name="railroad_square::get_rent() const" comment="" line="24" main_generator_called="MAIN_GENERATOR">
+         <scalar name="return" comment="" line="24" base_type="int32" complete_type="int32" init_mode="disabled" init_range="disabled" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+   </file>
+   <file name="C:\\Polyspace\\tools\\Jenkins\\Monopoly\\utility_square.cpp" comment="">
+      <function name="utility_square::get_rent() const" comment="" line="25" main_generator_called="MAIN_GENERATOR">
+         <scalar name="return" comment="" line="25" base_type="int32" complete_type="int32" init_mode="disabled" init_range="disabled" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+   </file>
+</global>

@@ -1,0 +1,482 @@
+<polyspace-bug-finder-nodesktop R2016a PID17672 PGID17672>
+
+Polyspace verification of Monopoly project.
+Starting at 04/05/2016, 14h54.
+
+Warning: '-includes-to-ignore all-headers' is no longer supported. Use '-do-not-generate-results-for all-headers' instead.
+Warning: option -align was given several times with different values (64, 32)
+|        Taking the last value (32)
+
+Activated checkers: 
+       INT_ZERO_DIV, FLOAT_ZERO_DIV, INT_CONV_OVFL, UINT_CONV_OVFL, SIGN_CHANGE, FLOAT_CONV_OVFL, 
+  INT_STD_LIB, FLOAT_STD_LIB, OUT_BOUND_ARRAY, NULL_PTR, OUT_BOUND_PTR, MEM_STD_LIB, STR_STD_LIB, 
+  FREED_PTR, DOUBLE_DEALLOCATION, BAD_FREE, BAD_DELETE, BAD_EQUAL_USE, BAD_EQUAL_EQUAL_USE, 
+  DECL_MISMATCH, PTR_SIZEOF_MISMATCH, USELESS_WRITE, NON_INIT_VAR, NON_INIT_PTR, VAR_SHADOWING, 
+  MISSING_RETURN, RESOURCE_LEAK, UNREACHABLE, DEAD_CODE, PARTIALLY_ACCESSED_ARRAY, USELESS_IF, 
+  DEADLOCK, BAD_LOCK, DOUBLE_LOCK, DATA_RACE, DOUBLE_UNLOCK, BAD_UNLOCK, OTHER_STD_LIB, ASSERT, 
+  STRING_FORMAT, IMPROPER_ARRAY_INIT, BAD_PTR_SCALING, SIZEOF_MISUSE, LOCAL_ADDR_ESCAPE, 
+  STR_FORMAT_BUFFER_OVERFLOW, STRLIB_BUFFER_OVERFLOW, STRLIB_BUFFER_UNDERFLOW, 
+  READ_ONLY_RESOURCE_WRITE, CLOSED_RESOURCE_USE, DOUBLE_RESOURCE_CLOSE, OPERATOR_PRECEDENCE, 
+  EXCP_CAUGHT_BY_VALUE, EXCP_HANDLER_HIDDEN, STD_FUNC_ARG_MISMATCH, INVALID_MEMORY_ASSUMPTION, 
+  CONSTANT_OBJECT_WRITE, INVALID_VA_LIST_ARG, NON_POSITIVE_VLA_SIZE, OBJECT_SLICING, 
+  PARTIAL_OVERRIDE, VIRTUAL_FUNC_HIDING, MISSING_COPY_CTOR_CALL, MISSING_BASE_ASSIGN_OP_CALL, 
+  DTOR_NOT_VIRTUAL, MISSING_SELF_ASSIGN_TEST
+
+Verifying sources compliance ...
+
+Options used with Verifier:
+-bug-finder=true
+-polyspace-version=2.1 (R2016a)
+-verif-version=1.0
+-to=module analysis
+
+User:
+-date=1
+-lang=CPP
+-do-not-generate-results-for=all-headers
+-misra-cpp=SQO-subset1
+-author=polyspace_configure
+-dialect=gnu4.9
+-results-dir=C:\Polyspace\Tools\Jenkins\Workspace\Monopoly\R_BF_1
+-target=i386
+-no-stl-stubs=true
+-default-sign-of-char=signed
+-align=32
+-prog=Monopoly
+-D1=_MMINTRIN_H_INCLUDED
+-D2=_XMMINTRIN_H_INCLUDED
+-D3=_EMMINTRIN_H_INCLUDED
+-D4=BOOST_UUID_NO_SIMD
+-D5=_WPROCESS_DEFINED
+-D6=__attribute__(a)=
+-D7=__INT_LEAST8_TYPE__=char
+-D8=__INT_LEAST16_TYPE__=short
+-D9=__INT_LEAST32_TYPE__=int
+-D10=__INT_LEAST64_TYPE__=long long
+-D11=__UINT_LEAST8_TYPE__=unsigned char
+-D12=__UINT_LEAST16_TYPE__=unsigned short
+-D13=__UINT_LEAST32_TYPE__=unsigned int
+-D14=__UINT_LEAST64_TYPE__=unsigned long long
+-D15=__INT_FAST8_TYPE__=char
+-D16=__INT_FAST16_TYPE__=short
+-D17=__INT_FAST32_TYPE__=int
+-D18=__INT_FAST64_TYPE__=long long
+-D19=__UINT_FAST8_TYPE__=unsigned char
+-D20=__UINT_FAST16_TYPE__=unsigned short
+-D21=__UINT_FAST32_TYPE__=unsigned int
+-D22=__UINT_FAST64_TYPE__=unsigned long long
+-D23=__INTMAX_TYPE__=int
+-D24=__UINTMAX_TYPE__=unsigned int
+-OS-target=no-predefined-os
+
+
+Verifying host configuration:
+Number of cores:                4
+Processor type:                 amd64
+Processor model:                Intel(R) Xeon(R) CPU E5-1620 v2 @ 3.70GHz
+Processor frequency:            3.700 GHz
+Memory > 4 GB:                     23.91 GB
+Tmp space available in C:\Temp:    551.8 GB
+
+Remark: 4 core(s) detected. The verification uses 4 core(s).
+*** Configuration of the host :	OK
+
+
+Type C:\Polyspace\Tools\Jenkins\Workspace\Monopoly\R_BF_1\kill-rte-kernel.bat on host GNB-CBARD to halt Verifier process
+
+
+Checking license ...
+License is OK
+
+
+Polyspace C++ analysis
+Copyright 1999-2016 The MathWorks, Inc.
+All rights reserved.
+
+Starting at: Tue Apr 05 14:54:13 2016
+Host: MINGW64_7_64-6.1 GNB-CBARD 0 amd64
+User: SYSTEM
+**********************************************************
+***
+*** GNU C++ 4.9 source compliance checking
+***
+**********************************************************
+OS-target no-predefined-OS implies: -include=C:\MATLAB\R2016a\polyspace\verifier\cxx\cinclude\__polyspace__libc_defs.h
+                                    -IC:\MATLAB\R2016a\polyspace\verifier\cxx\include\include-libcxx
+                                    -IC:\MATLAB\R2016a\polyspace\verifier\cxx\include\include-libc
+
+target i386
+
+Verifying sources ...
+Verifying die.cpp (1/12)
+Verifying board.cpp (2/12)
+Verifying game.cpp (3/12)
+Verifying go_square.cpp (4/12)
+Verifying lot_square.cpp (5/12)
+Verifying main.cpp (6/12)
+Verifying other_square.cpp (7/12)
+Verifying player.cpp (8/12)
+Verifying property_square.cpp (9/12)
+Verifying railroad_square.cpp (10/12)
+Verifying square.cpp (11/12)
+Verifying utility_square.cpp (12/12)
+Global compilation phase...
+
+Number of files                  : 12
+Number of lines                  : 966
+Number of lines without comments : 685
+
+Verifying cross-files GNU C++ 4.9 compliance
+Propagating data types... 8%
+Propagating data types... 100%
+Analyzing data type mismatch... 8%
+Analyzing data type mismatch... 100%
+Finalizing data type handling
+
+Stubbing standard library functions ...
+Propagating data types... 50%
+Propagating data types... 100%
+Analyzing data type mismatch... 50%
+Analyzing data type mismatch... 100%
+Finalizing data type handling
+Remark: The generated default DRS XML file "drs-template.xml" can be found in <result_dir> folder.
+Doing code transformations ...
+
+
+**********************************************************
+MISRA C++ Rule checker results
+ Use the Report Generator in order to get the complete XML report.
+**********************************************************
+Summary per file:
+  File C:\Polyspace\tools\Jenkins\Monopoly\board.cpp: 
+    42 rules violated
+  File C:\Polyspace\tools\Jenkins\Monopoly\game.cpp: 
+    7 rules violated
+  File C:\Polyspace\tools\Jenkins\Monopoly\railroad_square.cpp: 
+    1 rule violated
+**********************************************************
+Summary per rule:
+  rule 18-4-1 violated 46 times
+  rule 6-6-5 violated 4 times
+
+
+
+
+Packing compilation data
+done.
+
+**********************************************************
+***
+*** GNU C++ 4.9 source compliance checking done
+***
+**********************************************************
+Ending at: Tue Apr 05 14:54:24 2016
+User time for compilation: 00:00:10.60 (10.61real, 10.61u + 0s (0.09gc))
+
+Polyspace C++ analysis
+Copyright 1999-2016 The MathWorks, Inc.
+All rights reserved.
+
+Starting at: Tue Apr 05 14:54:24 2016
+Host: MINGW64_7_64-6.1 GNB-CBARD 0 amd64
+User: SYSTEM
+**********************************************************
+***
+*** Beginning Bug-finder - Global analysis
+***
+**********************************************************
+**** Bug-finder - Global analysis - 1 (P_AL)
+Total complexity = 12728
+**** Bug-finder - Global analysis - 1 (P_AL) took 0.8real, 0.8u + 0s (0.11gc)
+**** Bug-finder - Global analysis - 2 (P_ACP)
+* n-acp-t = 0 n-acp-l = 0
+**** Bug-finder - Global analysis - 2 (P_ACP) took 0.06real, 0.06u + 0s
+**** Bug-finder - Global analysis - 3 (P_O)
+**** Bug-finder - Global analysis - 3 (P_O) took 0.14real, 0.14u + 0s (0.09gc)
+**** Bug-finder - Global analysis - 4 (P_MA)
+**** Bug-finder - Global analysis - 4 (P_MA) took 0.26real, 0.26u + 0s (0.02gc)
+**** Bug-finder - Global analysis - 5 (P_G)
+**** Bug-finder - Global analysis - 5 (P_G) took 1.14real, 1.14u + 0s (0.03gc)
+**** Bug-finder - Global analysis - 6 (P_DRC)
+**** Bug-finder - Global analysis - 6 (P_DRC) took 0real, 0u + 0s
+**** Bug-finder - Global analysis - 7 (P_DLC)
+**** Bug-finder - Global analysis - 7 (P_DLC) took 0real, 0u + 0s
+**** Bug-finder - Global analysis - 8 (P_TT)
+**** Bug-finder - Global analysis - 8 (P_TT) took 0.03real, 0.03u + 0s
+**** Bug-finder - Global analysis - 9 (P_FI)
+**** Bug-finder - Global analysis - 9 (P_FI) took 0.35real, 0.35u + 0s (0.02gc)
+
+Generating GUI files
+
+Defects statistics:
+  - Total number of defects: 0
+
+GUI files generation completed in 0.31real
+
+**********************************************************
+***
+*** Bug-finder - Global analysis done
+***
+**********************************************************
+Ending at: Tue Apr 05 14:54:28 2016
+User time for global: 00:00:04.49 (4.49real, 4.49u + 0s (0.03gc))
+
+Polyspace C++ analysis
+Copyright 1999-2016 The MathWorks, Inc.
+All rights reserved.
+
+Starting at: Tue Apr 05 14:54:28 2016
+Host: MINGW64_7_64-6.1 GNB-CBARD 0 amd64
+User: SYSTEM
+**********************************************************
+***
+*** Beginning Bug-finder - Function Analysis
+***
+**********************************************************
+**** Bug-finder - Function Analysis - (Verifying function #1 / 94: railroad_square::output() const)
+**** Bug-finder - Function Analysis - (Verifying function #2 / 94: square::output() const)
+**** Bug-finder - Function Analysis - (Verifying function #3 / 94: game::add_die(die *))
+**** Bug-finder - Function Analysis - (Verifying function #4 / 94: square::get_name() const)
+**** Bug-finder - Function Analysis - (Verifying function #5 / 94: player::get_my_square() const)
+**** Bug-finder - Function Analysis - (Verifying function #6 / 94: board::get_starting_square())
+**** Bug-finder - Function Analysis - (Verifying function #7 / 94: other_square::other_square(const std::basic_string<char, std::char_traits<char>, std::allocator<char>> &))
+**** Bug-finder - Function Analysis - (Verifying function #8 / 94: board::add_square(square *))
+**** Bug-finder - Function Analysis - (Verifying function #9 / 94: utility_square::~utility_square())
+**** Bug-finder - Function Analysis - (Verifying function #10 / 94: square::passed_by(player &))
+**** Bug-finder - Function Analysis - (Verifying function #11 / 94: std::basic_string<T1, T2, T3> &std::basic_string<T1, T2, T3>::operator =(const std::basic_string<T1, T2, T3> &) [with T1=char, T2=std::char_traits<char>, T3=std::allocator<char>])
+**** Bug-finder - Function Analysis - (Verifying function #12 / 94: square::~square())
+**** Bug-finder - Function Analysis - (Verifying function #13 / 94: game::play())
+**** Bug-finder - Function Analysis - (Verifying function #14 / 94: utility_square::get_rent() const)
+**** Bug-finder - Function Analysis - (Verifying function #15 / 94: railroad_square::get_rent() const)
+**** Bug-finder - Function Analysis - (Verifying function #16 / 94: game::get_numberOfDies() const)
+**** Bug-finder - Function Analysis - (Verifying function #17 / 94: board::get_numberOfSquares() const)
+**** Bug-finder - Function Analysis - (Verifying function #18 / 94: board::set_square(int, square *))
+**** Bug-finder - Function Analysis - (Verifying function #19 / 94: game::set_numberOfDies(int))
+**** Bug-finder - Function Analysis - (Verifying function #20 / 94: utility_square::utility_square(const std::basic_string<char, std::char_traits<char>, std::allocator<char>> &, int))
+**** Bug-finder - Function Analysis - (Verifying function #21 / 94: property_square::property_square(const std::basic_string<char, std::char_traits<char>, std::allocator<char>> &, int))
+**** Bug-finder - Function Analysis - (Verifying function #22 / 94: std::basic_string<T1, T2, T3>::~basic_string<char, std::char_traits<char>, std::allocator<char>>() [with T1=char, T2=std::char_traits<char>, T3=std::allocator<char>])
+**** Bug-finder - Function Analysis - (Verifying function #23 / 94: railroad_square::~railroad_square())
+**** Bug-finder - Function Analysis - (Verifying function #24 / 94: other_square::landed_on_by(player &))
+**** Bug-finder - Function Analysis - (Verifying function #25 / 94: property_square::output() const)
+**** Bug-finder - Function Analysis - (Verifying function #26 / 94: property_square::landed_on_by(player &))
+**** Bug-finder - Function Analysis - (Verifying function #27 / 94: player::set_name(const std::basic_string<char, std::char_traits<char>, std::allocator<char>> &))
+**** Bug-finder - Function Analysis - (Verifying function #28 / 94: die::output() const)
+**** Bug-finder - Function Analysis - (Verifying function #29 / 94: std::basic_string<T1, T2, T3>::basic_string<char, std::char_traits<char>, std::allocator<char>>() [with T1=char, T2=std::char_traits<char>, T3=std::allocator<char>])
+**** Bug-finder - Function Analysis - (Verifying function #30 / 94: other_square::output() const)
+**** Bug-finder - Function Analysis - (Verifying function #31 / 94: player::set_cash(int))
+**** Bug-finder - Function Analysis - (Verifying function #32 / 94: game::play_one_round())
+**** Bug-finder - Function Analysis - (Verifying function #33 / 94: game::get_numberOfPlayers() const)
+**** Bug-finder - Function Analysis - (Verifying function #34 / 94: game::get_board() const)
+**** Bug-finder - Function Analysis - (Verifying function #35 / 94: std::basic_string<T1, T2, T3>::_Alloc_hider::~_Alloc_hider() [with T1=char, T2=std::char_traits<char>, T3=std::allocator<char>])
+**** Bug-finder - Function Analysis - (Verifying function #36 / 94: T3 std::basic_string<T1, T2, T3>::get_allocator() const [with T1=char, T2=std::char_traits<char>, T3=std::allocator<char>])
+**** Bug-finder - Function Analysis - (Verifying function #37 / 94: square::square(const std::basic_string<char, std::char_traits<char>, std::allocator<char>> &))
+**** Bug-finder - Function Analysis - (Verifying function #38 / 94: lot_square::get_rent() const)
+**** Bug-finder - Function Analysis - (Verifying function #39 / 94: go_square::~go_square())
+**** Bug-finder - Function Analysis - (Verifying function #40 / 94: game::set_numberOfPlayers(int))
+**** Bug-finder - Function Analysis - (Verifying function #41 / 94: square::set_next_square(square *))
+**** Bug-finder - Function Analysis - (Verifying function #42 / 94: player::set_my_square(square *))
+**** Bug-finder - Function Analysis - (Verifying function #43 / 94: std::basic_string<T1, T2, T3>::_Rep &std::basic_string<T1, T2, T3>::_S_empty_rep() [with T1=char, T2=std::char_traits<char>, T3=std::allocator<char>])
+**** Bug-finder - Function Analysis - (Verifying function #44 / 94: std::basic_string<T1, T2, T3>::_Rep &std::basic_string<T1, T2, T3>::_Rep::_S_empty_rep() [with T1=char, T2=std::char_traits<char>, T3=std::allocator<char>])
+**** Bug-finder - Function Analysis - (Verifying function #45 / 94: game::~game())
+**** Bug-finder - Function Analysis - (Verifying function #46 / 94: T1 *std::basic_string<T1, T2, T3>::_M_data() const [with T1=char, T2=std::char_traits<char>, T3=std::allocator<char>])
+**** Bug-finder - Function Analysis - (Verifying function #47 / 94: main)
+**** Bug-finder - Function Analysis - (Verifying function #48 / 94: property_square::~property_square())
+**** Bug-finder - Function Analysis - (Verifying function #49 / 94: square::get_next_square() const)
+**** Bug-finder - Function Analysis - (Verifying function #50 / 94: game::output() const)
+**** Bug-finder - Function Analysis - (Verifying function #51 / 94: game::get_player(int))
+**** Bug-finder - Function Analysis - (Verifying function #52 / 94: game::get_die(int) const)
+**** Bug-finder - Function Analysis - (Verifying function #53 / 94: game::game())
+**** Bug-finder - Function Analysis - (Verifying function #54 / 94: game::set_player(int, player *))
+**** Bug-finder - Function Analysis - (Verifying function #55 / 94: _polyspace_random_int())
+**** Bug-finder - Function Analysis - (Verifying function #56 / 94: player::take_a_turn(die &, die &))
+**** Bug-finder - Function Analysis - (Verifying function #57 / 94: game::set_board(board *))
+**** Bug-finder - Function Analysis - (Verifying function #58 / 94: square::set_name(const std::basic_string<char, std::char_traits<char>, std::allocator<char>> &))
+**** Bug-finder - Function Analysis - (Verifying function #59 / 94: player::collect(int))
+**** Bug-finder - Function Analysis - (Verifying function #60 / 94: die::set_face_value(int))
+**** Bug-finder - Function Analysis - (Verifying function #61 / 94: void std::basic_string<T1, T2, T3>::_Rep::_M_dispose(const T3 &) [with T1=char, T2=std::char_traits<char>, T3=std::allocator<char>])
+**** Bug-finder - Function Analysis - (Verifying function #62 / 94: player::~player())
+**** Bug-finder - Function Analysis - (Verifying function #63 / 94: player::get_name() const)
+**** Bug-finder - Function Analysis - (Verifying function #64 / 94: game::set_die(int, die *))
+**** Bug-finder - Function Analysis - (Verifying function #65 / 94: die::~die())
+**** Bug-finder - Function Analysis - (Verifying function #66 / 94: utility_square::output() const)
+**** Bug-finder - Function Analysis - (Verifying function #67 / 94: other_square::~other_square())
+**** Bug-finder - Function Analysis - (Verifying function #68 / 94: game::add_player(player *))
+**** Bug-finder - Function Analysis - (Verifying function #69 / 94: property_square::get_price() const)
+**** Bug-finder - Function Analysis - (Verifying function #70 / 94: player::output() const)
+**** Bug-finder - Function Analysis - (Verifying function #71 / 94: board::~board())
+**** Bug-finder - Function Analysis - (Verifying function #72 / 94: go_square::go_square(const std::basic_string<char, std::char_traits<char>, std::allocator<char>> &))
+**** Bug-finder - Function Analysis - (Verifying function #73 / 94: T1 *std::basic_string<T1, T2, T3>::_Rep::_M_refdata() [with T1=char, T2=std::char_traits<char>, T3=std::allocator<char>])
+**** Bug-finder - Function Analysis - (Verifying function #74 / 94: go_square::landed_on_by(player &))
+**** Bug-finder - Function Analysis - (Verifying function #75 / 94: go_square::output() const)
+**** Bug-finder - Function Analysis - (Verifying function #76 / 94: lot_square::output() const)
+**** Bug-finder - Function Analysis - (Verifying function #77 / 94: die::die())
+**** Bug-finder - Function Analysis - (Verifying function #78 / 94: player::get_cash() const)
+**** Bug-finder - Function Analysis - (Verifying function #79 / 94: die::get_face_value() const)
+**** Bug-finder - Function Analysis - (Verifying function #80 / 94: board::output() const)
+**** Bug-finder - Function Analysis - (Verifying function #81 / 94: railroad_square::railroad_square(const std::basic_string<char, std::char_traits<char>, std::allocator<char>> &, int))
+**** Bug-finder - Function Analysis - (Verifying function #82 / 94: property_square::set_price(int))
+**** Bug-finder - Function Analysis - (Verifying function #83 / 94: std::basic_string<T1, T2, T3>::_Alloc_hider::_Alloc_hider(T1 *, const T3 &) [with T1=char, T2=std::char_traits<char>, T3=std::allocator<char>])
+**** Bug-finder - Function Analysis - (Verifying function #84 / 94: board::set_numberOfSquares(int))
+**** Bug-finder - Function Analysis - (Verifying function #85 / 94: player::player(const std::basic_string<char, std::char_traits<char>, std::allocator<char>> &))
+**** Bug-finder - Function Analysis - (Verifying function #86 / 94: go_square::passed_by(player &))
+**** Bug-finder - Function Analysis - (Verifying function #87 / 94: board::board())
+**** Bug-finder - Function Analysis - (Verifying function #88 / 94: board::get_square(int))
+**** Bug-finder - Function Analysis - (Verifying function #89 / 94: std::basic_string<T1, T2, T3>::_Rep *std::basic_string<T1, T2, T3>::_M_rep() const [with T1=char, T2=std::char_traits<char>, T3=std::allocator<char>])
+**** Bug-finder - Function Analysis - (Verifying function #90 / 94: lot_square::~lot_square())
+**** Bug-finder - Function Analysis - (Verifying function #91 / 94: player::move(int))
+**** Bug-finder - Function Analysis - (Verifying function #92 / 94: lot_square::lot_square(const std::basic_string<char, std::char_traits<char>, std::allocator<char>> &, int, int))
+**** Bug-finder - Function Analysis - (Verifying function #93 / 94: die::roll())
+**** Bug-finder - Function Analysis - (Verifying function #94 / 94: lot_square::set_rent(int))
+**** Bug-finder - Function Analysis - (Verifying function #1 / 94: railroad_square::output() const) took 1.52real
+**** Bug-finder - Function Analysis - (Verifying function #2 / 94: square::output() const) took 1.89real
+**** Bug-finder - Function Analysis - (Verifying function #4 / 94: square::get_name() const) took 1.7real
+**** Bug-finder - Function Analysis - (Verifying function #3 / 94: game::add_die(die *)) took 1.93real
+**** Bug-finder - Function Analysis - (Verifying function #5 / 94: player::get_my_square() const) took 0.29real
+**** Bug-finder - Function Analysis - (Verifying function #6 / 94: board::get_starting_square()) took 0.29real
+**** Bug-finder - Function Analysis - (Verifying function #7 / 94: other_square::other_square(const std::basic_string<char, std::char_traits<char>, std::allocator<char>> &)) took 0.32real
+**** Bug-finder - Function Analysis - (Verifying function #8 / 94: board::add_square(square *)) took 0.21real
+**** Bug-finder - Function Analysis - (Verifying function #10 / 94: square::passed_by(player &)) took 0.15real
+**** Bug-finder - Function Analysis - (Verifying function #11 / 94: std::basic_string<T1, T2, T3> &std::basic_string<T1, T2, T3>::operator =(const std::basic_string<T1, T2, T3> &) [with T1=char, T2=std::char_traits<char>, T3=std::allocator<char>]) took 0.17real
+**** Bug-finder - Function Analysis - (Verifying function #12 / 94: square::~square()) took 0.17real
+**** Bug-finder - Function Analysis - (Verifying function #9 / 94: utility_square::~utility_square()) took 0.27real
+**** Bug-finder - Function Analysis - (Verifying function #14 / 94: utility_square::get_rent() const) took 0.2real
+**** Bug-finder - Function Analysis - (Verifying function #15 / 94: railroad_square::get_rent() const) took 0.16real
+**** Bug-finder - Function Analysis - (Verifying function #13 / 94: game::play()) took 0.25real
+**** Bug-finder - Function Analysis - (Verifying function #16 / 94: game::get_numberOfDies() const) took 0.15real
+**** Bug-finder - Function Analysis - (Verifying function #17 / 94: board::get_numberOfSquares() const) took 0.18real
+**** Bug-finder - Function Analysis - (Verifying function #20 / 94: utility_square::utility_square(const std::basic_string<char, std::char_traits<char>, std::allocator<char>> &, int)) took 0.17real
+**** Bug-finder - Function Analysis - (Verifying function #18 / 94: board::set_square(int, square *)) took 0.19real
+**** Bug-finder - Function Analysis - (Verifying function #19 / 94: game::set_numberOfDies(int)) took 0.18real
+**** Bug-finder - Function Analysis - (Verifying function #24 / 94: other_square::landed_on_by(player &)) took 0.15real
+**** Bug-finder - Function Analysis - (Verifying function #21 / 94: property_square::property_square(const std::basic_string<char, std::char_traits<char>, std::allocator<char>> &, int)) took 0.17real
+**** Bug-finder - Function Analysis - (Verifying function #22 / 94: std::basic_string<T1, T2, T3>::~basic_string<char, std::char_traits<char>, std::allocator<char>>() [with T1=char, T2=std::char_traits<char>, T3=std::allocator<char>]) took 0.18real
+**** Bug-finder - Function Analysis - (Verifying function #23 / 94: railroad_square::~railroad_square()) took 0.24real
+**** Bug-finder - Function Analysis - (Verifying function #25 / 94: property_square::output() const) took 0.18real
+**** Bug-finder - Function Analysis - (Verifying function #26 / 94: property_square::landed_on_by(player &)) took 0.22real
+**** Bug-finder - Function Analysis - (Verifying function #27 / 94: player::set_name(const std::basic_string<char, std::char_traits<char>, std::allocator<char>> &)) took 0.21real
+**** Bug-finder - Function Analysis - (Verifying function #28 / 94: die::output() const) took 0.17real
+**** Bug-finder - Function Analysis - (Verifying function #30 / 94: other_square::output() const) took 0.14real
+**** Bug-finder - Function Analysis - (Verifying function #29 / 94: std::basic_string<T1, T2, T3>::basic_string<char, std::char_traits<char>, std::allocator<char>>() [with T1=char, T2=std::char_traits<char>, T3=std::allocator<char>]) took 0.19real
+**** Bug-finder - Function Analysis - (Verifying function #33 / 94: game::get_numberOfPlayers() const) took 0.15real
+**** Bug-finder - Function Analysis - (Verifying function #31 / 94: player::set_cash(int)) took 0.17real
+**** Bug-finder - Function Analysis - (Verifying function #34 / 94: game::get_board() const) took 0.17real
+**** Bug-finder - Function Analysis - (Verifying function #35 / 94: std::basic_string<T1, T2, T3>::_Alloc_hider::~_Alloc_hider() [with T1=char, T2=std::char_traits<char>, T3=std::allocator<char>]) took 0.18real
+**** Bug-finder - Function Analysis - (Verifying function #36 / 94: T3 std::basic_string<T1, T2, T3>::get_allocator() const [with T1=char, T2=std::char_traits<char>, T3=std::allocator<char>]) took 0.2real
+**** Bug-finder - Function Analysis - (Verifying function #32 / 94: game::play_one_round()) took 0.26real
+**** Bug-finder - Function Analysis - (Verifying function #38 / 94: lot_square::get_rent() const) took 0.15real
+**** Bug-finder - Function Analysis - (Verifying function #37 / 94: square::square(const std::basic_string<char, std::char_traits<char>, std::allocator<char>> &)) took 0.19real
+**** Bug-finder - Function Analysis - (Verifying function #41 / 94: square::set_next_square(square *)) took 0.17real
+**** Bug-finder - Function Analysis - (Verifying function #40 / 94: game::set_numberOfPlayers(int)) took 0.18real
+**** Bug-finder - Function Analysis - (Verifying function #42 / 94: player::set_my_square(square *)) took 0.15real
+**** Bug-finder - Function Analysis - (Verifying function #39 / 94: go_square::~go_square()) took 0.24real
+**** Bug-finder - Function Analysis - (Verifying function #43 / 94: std::basic_string<T1, T2, T3>::_Rep &std::basic_string<T1, T2, T3>::_S_empty_rep() [with T1=char, T2=std::char_traits<char>, T3=std::allocator<char>]) took 0.16real
+**** Bug-finder - Function Analysis - (Verifying function #44 / 94: std::basic_string<T1, T2, T3>::_Rep &std::basic_string<T1, T2, T3>::_Rep::_S_empty_rep() [with T1=char, T2=std::char_traits<char>, T3=std::allocator<char>]) took 0.16real
+**** Bug-finder - Function Analysis - (Verifying function #46 / 94: T1 *std::basic_string<T1, T2, T3>::_M_data() const [with T1=char, T2=std::char_traits<char>, T3=std::allocator<char>]) took 0.14real
+**** Bug-finder - Function Analysis - (Verifying function #49 / 94: square::get_next_square() const) took 0.16real
+**** Bug-finder - Function Analysis - (Verifying function #48 / 94: property_square::~property_square()) took 0.22real
+**** Bug-finder - Function Analysis - (Verifying function #50 / 94: game::output() const) took 0.2real
+**** Bug-finder - Function Analysis - (Verifying function #45 / 94: game::~game()) took 0.29real
+**** Bug-finder - Function Analysis - (Verifying function #55 / 94: _polyspace_random_int()) took 0.14real
+**** Bug-finder - Function Analysis - (Verifying function #51 / 94: game::get_player(int)) took 0.2real
+**** Bug-finder - Function Analysis - (Verifying function #52 / 94: game::get_die(int) const) took 0.2real
+**** Bug-finder - Function Analysis - (Verifying function #54 / 94: game::set_player(int, player *)) took 0.19real
+**** Bug-finder - Function Analysis - (Verifying function #57 / 94: game::set_board(board *)) took 0.15real
+**** Bug-finder - Function Analysis - (Verifying function #53 / 94: game::game()) took 0.32real
+**** Bug-finder - Function Analysis - (Verifying function #58 / 94: square::set_name(const std::basic_string<char, std::char_traits<char>, std::allocator<char>> &)) took 0.21real
+**** Bug-finder - Function Analysis - (Verifying function #56 / 94: player::take_a_turn(die &, die &)) took 0.25real
+**** Bug-finder - Function Analysis - (Verifying function #59 / 94: player::collect(int)) took 0.18real
+**** Bug-finder - Function Analysis - (Verifying function #47 / 94: main) took 0.82real
+**** Bug-finder - Function Analysis - (Verifying function #60 / 94: die::set_face_value(int)) took 0.18real
+**** Bug-finder - Function Analysis - (Verifying function #61 / 94: void std::basic_string<T1, T2, T3>::_Rep::_M_dispose(const T3 &) [with T1=char, T2=std::char_traits<char>, T3=std::allocator<char>]) took 0.2real
+**** Bug-finder - Function Analysis - (Verifying function #63 / 94: player::get_name() const) took 0.17real
+**** Bug-finder - Function Analysis - (Verifying function #62 / 94: player::~player()) took 0.18real
+**** Bug-finder - Function Analysis - (Verifying function #64 / 94: game::set_die(int, die *)) took 0.2real
+**** Bug-finder - Function Analysis - (Verifying function #65 / 94: die::~die()) took 0.16real
+**** Bug-finder - Function Analysis - (Verifying function #66 / 94: utility_square::output() const) took 0.15real
+**** Bug-finder - Function Analysis - (Verifying function #67 / 94: other_square::~other_square()) took 0.24real
+**** Bug-finder - Function Analysis - (Verifying function #69 / 94: property_square::get_price() const) took 0.17real
+**** Bug-finder - Function Analysis - (Verifying function #68 / 94: game::add_player(player *)) took 0.24real
+**** Bug-finder - Function Analysis - (Verifying function #70 / 94: player::output() const) took 0.24real
+**** Bug-finder - Function Analysis - (Verifying function #72 / 94: go_square::go_square(const std::basic_string<char, std::char_traits<char>, std::allocator<char>> &)) took 0.17real
+**** Bug-finder - Function Analysis - (Verifying function #73 / 94: T1 *std::basic_string<T1, T2, T3>::_Rep::_M_refdata() [with T1=char, T2=std::char_traits<char>, T3=std::allocator<char>]) took 0.16real
+**** Bug-finder - Function Analysis - (Verifying function #75 / 94: go_square::output() const) took 0.17real
+**** Bug-finder - Function Analysis - (Verifying function #74 / 94: go_square::landed_on_by(player &)) took 0.17real
+**** Bug-finder - Function Analysis - (Verifying function #71 / 94: board::~board()) took 0.36real
+**** Bug-finder - Function Analysis - (Verifying function #77 / 94: die::die()) took 0.17real
+**** Bug-finder - Function Analysis - (Verifying function #78 / 94: player::get_cash() const) took 0.15real
+**** Bug-finder - Function Analysis - (Verifying function #79 / 94: die::get_face_value() const) took 0.15real
+**** Bug-finder - Function Analysis - (Verifying function #76 / 94: lot_square::output() const) took 0.22real
+**** Bug-finder - Function Analysis - (Verifying function #80 / 94: board::output() const) took 0.15real
+**** Bug-finder - Function Analysis - (Verifying function #81 / 94: railroad_square::railroad_square(const std::basic_string<char, std::char_traits<char>, std::allocator<char>> &, int)) took 0.18real
+**** Bug-finder - Function Analysis - (Verifying function #83 / 94: std::basic_string<T1, T2, T3>::_Alloc_hider::_Alloc_hider(T1 *, const T3 &) [with T1=char, T2=std::char_traits<char>, T3=std::allocator<char>]) took 0.18real
+**** Bug-finder - Function Analysis - (Verifying function #82 / 94: property_square::set_price(int)) took 0.18real
+**** Bug-finder - Function Analysis - (Verifying function #84 / 94: board::set_numberOfSquares(int)) took 0.19real
+**** Bug-finder - Function Analysis - (Verifying function #85 / 94: player::player(const std::basic_string<char, std::char_traits<char>, std::allocator<char>> &)) took 0.18real
+**** Bug-finder - Function Analysis - (Verifying function #86 / 94: go_square::passed_by(player &)) took 0.17real
+**** Bug-finder - Function Analysis - (Verifying function #89 / 94: std::basic_string<T1, T2, T3>::_Rep *std::basic_string<T1, T2, T3>::_M_rep() const [with T1=char, T2=std::char_traits<char>, T3=std::allocator<char>]) took 0.17real
+**** Bug-finder - Function Analysis - (Verifying function #88 / 94: board::get_square(int)) took 0.21real
+**** Bug-finder - Function Analysis - (Verifying function #92 / 94: lot_square::lot_square(const std::basic_string<char, std::char_traits<char>, std::allocator<char>> &, int, int)) took 0.18real
+**** Bug-finder - Function Analysis - (Verifying function #90 / 94: lot_square::~lot_square()) took 0.27real
+**** Bug-finder - Function Analysis - (Verifying function #93 / 94: die::roll()) took 0.17real
+**** Bug-finder - Function Analysis - (Verifying function #94 / 94: lot_square::set_rent(int)) took 0.17real
+**** Bug-finder - Function Analysis - (Verifying function #91 / 94: player::move(int)) took 0.45real
+**** Bug-finder - Function Analysis - (Verifying function #87 / 94: board::board()) took 22.97real
+
+Generating GUI files
+
+Defects statistics:
+  - Total number of defects: 2
+  - UNREACHABLE: 1
+  - DEAD_CODE: 1
+
+GUI files generation completed in 0.23real
+
+* Total IL complexity: 18745
+
+**********************************************************
+***
+*** Bug-finder - Function Analysis done
+***
+**********************************************************
+Ending at: Tue Apr 05 14:54:59 2016
+User time for function: 00:00:30.36 (30.37real, 30.37u + 0s (0.05gc))
+
+Polyspace C++ analysis
+Copyright 1999-2016 The MathWorks, Inc.
+All rights reserved.
+
+Starting at: Tue Apr 05 14:54:59 2016
+Host: MINGW64_7_64-6.1 GNB-CBARD 0 amd64
+User: SYSTEM
+**********************************************************
+***
+*** Beginning Bug-finder - Module Analysis
+***
+**********************************************************
+**** Bug-finder - Module Analysis - 1 (Computing modules)
+* Created 1 module
+**** Bug-finder - Module Analysis - 1 (Computing modules) took 0.04real, 0.04u + 0s (0.02gc)
+**** Bug-finder - Module Analysis - (Verifying module #1 / 1)
+**** Bug-finder - Module Analysis - (Verifying module #1 / 1) took 6.63real
+**********************************************************
+***
+*** Bug-finder - Module Analysis done
+***
+**********************************************************
+Ending at: Tue Apr 05 14:55:06 2016
+User time for module: 00:00:06.88 (6.88real, 6.88u + 0s (0.02gc))
+
+Generating GUI files
+
+Defects statistics:
+  - Total number of defects: 2
+  - UNREACHABLE: 1
+  - DEAD_CODE: 1
+
+GUI files generation completed in 0.18real
+
+User time for polyspace-bug-finder-nodesktop: 00:00:53.1 (53.01real, 53.01u + 0s (0.2gc))
+
+***
+*** End of Polyspace analysis
+***

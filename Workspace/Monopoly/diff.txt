@@ -1,0 +1,25 @@
+
+Operation completed:
+--------------------
+
+Diff statistics for Defect results:
+-----------------------------------
+| Number of unmatched commented results                                      : 0
+| Number of unmatched uncommented results                                    : 0
+| Number of results comments not imported because a more recent one was found: 0
+| Number of partially imported results comments (due to a result change)     : 0
+| Number of fully imported results comments                                  : 0
+| Number of matched results without comment                                  : 2
+| Number of matched results with a comment coming from source code annotation: 0
+| Total number of results                                                    : 2
+
+Diff statistics for MISRA C++ results:
+--------------------------------------
+| Number of unmatched commented results                                      : 0
+| Number of unmatched uncommented results                                    : 0
+| Number of results comments not imported because a more recent one was found: 0
+| Number of partially imported results comments (due to a result change)     : 0
+| Number of fully imported results comments                                  : 0
+| Number of matched results without comment                                  : 50
+| Number of matched results with a comment coming from source code annotation: 0
+| Total number of results                                                    : 50
