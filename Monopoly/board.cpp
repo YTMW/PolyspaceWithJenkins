@@ -11,7 +11,7 @@
 #include "lot_square.h"
 #include "railroad_square.h"
 #include "utility_square.h"
-/* test3 */
+/* test4 */
 board::board()
 {
     /*
