@@ -24,9 +24,20 @@ jobs:
          displayName: 'Run a one-line script'
 
        - script: ls -l
-         workingDirectory: $(Agent.BuildDirectory)
+         displayName: 'exec ls -l'
+
        - script: echo $(Agent.BuildDirectory)
-         displayName: 'test'
+         workingDirectory: $(Agent.BuildDirectory)
+         displayName: 'exec Agent.BuildDirectory'
+
+       - script: echo $(Agent.Build.Repository.LocalPath)
+         displayName: 'exec Agent.Build.Repository.LocalPath'
+
+       - script: echo $(Agent.Build.Repository.Name)
+         displayName: 'exec Agent.Build.Repository.Name'
+
+       - script: echo $(Agent.Build.SourcesDirectory)
+         displayName: 'Agent.Build.SourcesDirectory'
 
        - script: |
            echo Add other tasks to build, test, and deploy your project.
