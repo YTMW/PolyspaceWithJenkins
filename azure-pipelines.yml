@@ -25,6 +25,7 @@ jobs:
 
        - script: ls -l
          workingDirectory: $(Agent.BuildDirectory)
+       - script: echo $(Agent.BuildDirectory)
          displayName: 'test'
 
        - script: |
