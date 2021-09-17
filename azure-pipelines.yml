@@ -9,31 +9,44 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
-jobs:
-- deployment: VMDeploy
-  displayName: Deploy to VM
-  environment:
-    name: Polyspace_Environment
-    resourceType: VirtualMachine
+stages:
+- stage: A
+  jobs:
+  - deployment: VMDeploy
+    displayName: Deploy to VM
+    environment:
+      name: Polyspace_Environment
+      resourceType: VirtualMachine
 
-  strategy:
-   runOnce:
-     deploy:
-       steps:
-       - script: echo Hello, world!
-         displayName: 'Run a one-line script'
+  - job: AA
+    steps:
+    - script: echo Hello, world!
+      displayName: 'Run a one-line script'
 
-       - script: ls -l
-         displayName: 'exec ls -l'
+    - script: ls -l
+      displayName: 'exec ls -l'
 
-       - script: |
-           echo "Agent.BuildDirectory:" $(Agent.BuildDirectory)
-           echo "Build.Repository.LocalPath:" $(Build.Repository.LocalPath)
-           echo "Build.Repository.Name:" $(Build.Repository.Name)
-           echo "Build.SourcesDirectory:" $(Build.SourcesDirectory)
-         displayName: 'check env variables'
+    - script: |
+        echo "Agent.BuildDirectory:" $(Agent.BuildDirectory)
+        echo "Build.Repository.LocalPath:" $(Build.Repository.LocalPath)
+        echo "Build.Repository.Name:" $(Build.Repository.Name)
+        echo "Build.SourcesDirectory:" $(Build.SourcesDirectory)
+      displayName: 'check env variables'
 
-       - script: |
-           echo Add other tasks to build, test, and deploy your project.
-           echo See https://aka.ms/yaml
-         displayName: 'Run a multi-line script'
+    - script: |
+        echo Add other tasks to build, test, and deploy your project.
+        echo See https://aka.ms/yaml
+      displayName: 'Run a multi-line script'
+
+- stage: B
+  jobs:
+  - deployment: VMDeploy
+    displayName: Deploy to VM
+    environment:
+      name: Polyspace_Environment
+      resourceType: VirtualMachine
+  
+  - job: BB
+    steps:
+    - script: ls -l
+      displayName: 'exec ls -l'
