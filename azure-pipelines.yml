@@ -23,7 +23,8 @@ jobs:
        - script: echo Hello, world!
          displayName: 'Run a one-line script'
 
-       - script: ls
+       - script: ls -l
+         workingDirectory: $(Agent.BuildDirectory)
          displayName: 'test'
 
        - script: |
