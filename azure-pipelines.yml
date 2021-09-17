@@ -30,14 +30,14 @@ jobs:
          workingDirectory: $(Agent.BuildDirectory)
          displayName: 'exec Agent.BuildDirectory'
 
-       - script: echo $(Agent.Build.Repository.LocalPath)
-         displayName: 'exec Agent.Build.Repository.LocalPath'
+       - script: echo $(Build.Repository.LocalPath)
+         displayName: 'exec Build.Repository.LocalPath'
 
-       - script: echo $(Agent.Build.Repository.Name)
-         displayName: 'exec Agent.Build.Repository.Name'
+       - script: echo $(Build.Repository.Name)
+         displayName: 'exec Build.Repository.Name'
 
-       - script: echo $(Agent.Build.SourcesDirectory)
-         displayName: 'Agent.Build.SourcesDirectory'
+       - script: echo $(Build.SourcesDirectory)
+         displayName: 'Build.SourcesDirectory'
 
        - script: |
            echo Add other tasks to build, test, and deploy your project.
