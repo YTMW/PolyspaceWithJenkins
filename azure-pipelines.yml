@@ -10,7 +10,7 @@ pool:
   vmImage: ubuntu-latest
 
 jobs:
-- deployment: 'DeployWebApplication'
+- deployment: VMDeploy
   displayName: Deploy to VM
   environment:
     name: Polyspace_Environment
