@@ -26,18 +26,12 @@ jobs:
        - script: ls -l
          displayName: 'exec ls -l'
 
-       - script: echo $(Agent.BuildDirectory)
-         workingDirectory: $(Agent.BuildDirectory)
-         displayName: 'exec Agent.BuildDirectory'
-
-       - script: echo $(Build.Repository.LocalPath)
-         displayName: 'exec Build.Repository.LocalPath'
-
-       - script: echo $(Build.Repository.Name)
-         displayName: 'exec Build.Repository.Name'
-
-       - script: echo $(Build.SourcesDirectory)
-         displayName: 'Build.SourcesDirectory'
+       - script: |
+           echo "Agent.BuildDirectory:" $(Agent.BuildDirectory)
+           echo "Build.Repository.LocalPath:" $(Build.Repository.LocalPath)
+           echo "Build.Repository.Name:" $(Build.Repository.Name)
+           echo "Build.SourcesDirectory:" $(Build.SourcesDirectory)
+         displayName: 'check env variables'
 
        - script: |
            echo Add other tasks to build, test, and deploy your project.
