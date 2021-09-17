@@ -6,17 +6,25 @@
 trigger:
 - master
 
+pool:
+  vmImage: ubuntu-latest
+
 jobs:
 - deployment: 'DeployWebApplication'
+  displayName: Deploy to VM
   environment:
     name: Polyspace_Environment
     resourceType: VirtualMachine
+    tags: linux
 
-  steps:
-  - script: echo Hello, world!
-    displayName: 'Run a one-line script'
+  strategy:
+   runOnce:
+     deploy:
+       steps:
+       - script: echo Hello, world!
+         displayName: 'Run a one-line script'
 
-  - script: |
-      echo Add other tasks to build, test, and deploy your project.
-      echo See https://aka.ms/yaml
-    displayName: 'Run a multi-line script'
+       - script: |
+           echo Add other tasks to build, test, and deploy your project.
+           echo See https://aka.ms/yaml
+         displayName: 'Run a multi-line script'
