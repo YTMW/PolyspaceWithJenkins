@@ -22,7 +22,7 @@ stages:
       runOnce:
         deploy:
           steps:
-          - checkout: $(Build.Repository.Name)
+          - checkout: self
             displayName: 'Checkout'
 
           - script: ls -l
