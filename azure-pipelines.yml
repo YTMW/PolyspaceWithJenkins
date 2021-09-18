@@ -20,9 +20,6 @@ stages:
 
   - job: PolyspaceConfigure
     steps:
-    - script: echo Hello, world!
-      displayName: 'Run a one-line script'
-
     - script: ls -l
       displayName: 'exec ls -l'
 
@@ -33,14 +30,10 @@ stages:
         echo "Build.SourcesDirectory:" $(Build.SourcesDirectory)
       displayName: 'check env variables'
 
-    - script: |
-        echo Add other tasks to build, test, and deploy your project.
-        echo See https://aka.ms/yaml
-      displayName: 'Run a multi-line script'
-
 - stage: Analysis
   jobs:
   - job: PolyspaceBugFinder
     steps:
+    - checkout: none
     - script: ls -l
       displayName: 'exec ls -l'
