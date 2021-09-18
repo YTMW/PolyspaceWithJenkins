@@ -25,8 +25,9 @@ stages:
           - checkout: self
             displayName: 'Checkout'
 
-          - script: ls -l
-            displayName: 'exec ls -l'
+          - script: |
+              echo "(test) ls -l: " ls -l
+            displayName: 'Run Polyspace-Configure'
 
           - script: |
               echo "Agent.BuildDirectory:" $(Agent.BuildDirectory)
@@ -49,4 +50,36 @@ stages:
           steps:
             - script: |
                 echo "(test) ls -l: " ls -l
-              displayName: 'Run Polyspace Bug Finder Analysis'
+              displayName: 'Run Polyspace Bug Finder'
+
+- stage: Upload
+  jobs:
+  - deployment: VMDeploy
+    displayName: 'Upload to Polyspace Access'
+    environment:
+      name: Polyspace_Environment
+      resourceType: VirtualMachine
+
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+            - script: |
+                echo "(test) ls -l: " ls -l
+              displayName: 'Upload to Polyspace Access'
+
+- stage: Notification
+  jobs:
+  - deployment: VMDeploy
+    displayName: 'Send E-Mail'
+    environment:
+      name: Polyspace_Environment
+      resourceType: VirtualMachine
+
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+            - script: |
+                echo "(test) ls -l: " ls -l
+              displayName: 'Send E-Mail'
