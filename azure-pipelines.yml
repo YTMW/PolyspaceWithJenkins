@@ -37,6 +37,12 @@ stages:
 
 - stage: Analysis
   jobs:
+  - deployment: VMDeploy
+    displayName: Deploy to VM
+    environment:
+      name: Polyspace_Environment
+      resourceType: VirtualMachine
+      
   - job: PolyspaceBugFinder
     steps:
       - script: |
