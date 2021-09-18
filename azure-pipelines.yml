@@ -37,16 +37,8 @@ stages:
 
 - stage: Analysis
   jobs:
-  - deployment: VMDeploy
-    displayName: Deploy to VM
-    environment:
-      name: Polyspace_Environment
-      resourceType: VirtualMachine
-
-    strategy:
-      runOnce:
-        deploy:
-          steps:
-          - script: |
-              echo "(test) ls -l: " ls -l
-            displayName: 'Run Polyspace Bug Finder Analysis'
+  - job: PolyspaceBugFinder
+    steps:
+      - script: |
+          echo "(test) ls -l: " ls -l
+        displayName: 'Run Polyspace Bug Finder Analysis'
