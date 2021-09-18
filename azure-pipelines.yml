@@ -10,7 +10,7 @@ pool:
   vmImage: ubuntu-latest
 
 stages:
-- stage: A
+- stage: Build
   jobs:
   - deployment: VMDeploy
     displayName: Deploy to VM
@@ -18,7 +18,7 @@ stages:
       name: Polyspace_Environment
       resourceType: VirtualMachine
 
-  - job: AA
+  - job: PolyspaceConfigure
     steps:
     - script: echo Hello, world!
       displayName: 'Run a one-line script'
@@ -38,15 +38,9 @@ stages:
         echo See https://aka.ms/yaml
       displayName: 'Run a multi-line script'
 
-- stage: B
+- stage: Analysis
   jobs:
-  - deployment: VMDeploy
-    displayName: Deploy to VM
-    environment:
-      name: Polyspace_Environment
-      resourceType: VirtualMachine
-  
-  - job: BB
+  - job: PolyspaceBugFinder
     steps:
     - script: ls -l
       displayName: 'exec ls -l'
