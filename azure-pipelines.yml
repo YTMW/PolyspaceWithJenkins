@@ -18,22 +18,31 @@ stages:
       name: Polyspace_Environment
       resourceType: VirtualMachine
 
-  - job: PolyspaceConfigure
-    steps:
-    - script: ls -l
-      displayName: 'exec ls -l'
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - script: ls -l
+            displayName: 'exec ls -l'
 
-    - script: |
-        echo "Agent.BuildDirectory:" $(Agent.BuildDirectory)
-        echo "Build.Repository.LocalPath:" $(Build.Repository.LocalPath)
-        echo "Build.Repository.Name:" $(Build.Repository.Name)
-        echo "Build.SourcesDirectory:" $(Build.SourcesDirectory)
-      displayName: 'check env variables'
+          - script: |
+              echo "Agent.BuildDirectory:" $(Agent.BuildDirectory)
+              echo "Build.Repository.LocalPath:" $(Build.Repository.LocalPath)
+              echo "Build.Repository.Name:" $(Build.Repository.Name)
+              echo "Build.SourcesDirectory:" $(Build.SourcesDirectory)
+            displayName: 'check env variables'
 
 - stage: Analysis
   jobs:
-  - job: PolyspaceBugFinder
-    steps:
-    - checkout: none
-    - script: ls -l
-      displayName: 'exec ls -l'
+  - deployment: VMDeploy
+    displayName: Deploy to VM
+    environment:
+      name: Polyspace_Environment
+      resourceType: VirtualMachine
+      
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - script: ls -l
+            displayName: 'exec ls -l'
